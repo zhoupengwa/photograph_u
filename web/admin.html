@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员接口测试</title>
+</head>
+<body>
+<a href="index.jsp">用户接口测试</a>|管理员接口测试|<a href="photographer.html">摄影师接口测试</a>
+<form action="admin/login">
+    <input type="text" name="account">
+    <input type="text" name="password">
+    <input type="submit" value="登录">
+</form>
+<hr/>
+列出所有未审核信息
+<form action="admin/listUnTreatedVerifies">
+    <input type="submit" value="列出">
+</form>
+<hr/>
+分页所有未审核信息
+<form action="admin/listUnTreatedVerifiesWithPage">
+    页面大小 <input type="text" name="page_size">
+    当前页<input type="text" name="current_page"><br/>
+    <input type="submit" value="列出">
+</form>
+
+<hr/>
+列出所有已审核信息
+<form action="admin/listTreatedVerifies">
+    <input type="submit" value="列出">
+</form>
+<hr/>
+分页列出所有已审核信息
+<form action="admin/listTreatedVerifiesWithPage">
+    页面大小 <input type="text" name="page_size">
+    当前页<input type="text" name="current_page"><br/>
+    <input type="submit" value="列出">
+</form>
+<hr/>
+审核通过
+<form action="admin/verifyPhotographerQualified">
+    编号 <input type="text" name="verify_id">
+    <input type="submit" value="审核">
+</form>
+<hr/>
+审核未通过
+<form action="admin/verifyPhotographerUnQualified">
+    编号 <input type="text" name="verify_id">
+    <input type="submit" value="审核">
+</form>
+<hr/>
+<hr/>
+查询所有风格
+<form action="admin/listStyles">
+    <input type="submit" value="查询">
+</form>
+添加风格
+<form action="admin/addStyle" enctype="multipart/form-data" method="post">
+    风格名 <input type="text" name="name">
+    <input type="file" name="file">
+    <input type="submit" value="添加">
+</form>
+<hr/>
+删除风格
+<form action="admin/deleteStyle">
+    风格id <input type="text" name="style_id">
+    <input type="submit" value="删除">
+</form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>摄影师接口测试</title>
+</head>
+<body>
+<a href="index.jsp">用户接口测试</a>|<a href="admin.html">管理员接口测试</a>|摄影师接口测试
+用户登录
+<form action="user/login" method="post">
+    手机 <input type="text" name="phone"> <br/>
+    密码<input type="text" name="password"> <br/>
+    <input type="submit" value="登录">
+</form>
+<hr/>
+查询个人信息
+<form action="photographer/lookInfo" method="post">
+    <input type="submit" value="查询">
+</form>
+<hr/>
+修改个人信息
+<form action="photographer/updateInfo" method="post">
+    价格<input type="text" name="price">
+    服务内容<input type="text" name="server_content">
+    简介<input type="text" name="introduce">
+    <input type="submit" value="修改">
+</form>
+<hr/>
+上传作品
+<form action="photographer/addPhoto" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" multiple="multiple">
+    <input type="submit" value="上传">
+</form>
+<hr/>
+删除作品
+<form action="photographer/deletePhoto" method="post">
+    作品id<input type="text" name="photo_id">
+    <input type="submit" value="删除">
+</form>
+<hr/>
+列出未处理订单信息
+<form action="photographer/listUnTreatedOrders" method="post">
+    <input type="submit" value="列出">
+</form>
+<hr/>
+列出未处理订单信息
+<form action="photographer/listUnTreatedOrdersWithPage" method="post">
+    页面大小<input type="text" name="page_size">
+    当前页<input type="text" name="current_page">
+    <input type="submit" value="列出">
+</form>
+<hr/>
+列出已处理订单信息
+<form action="photographer/listTreatedOrders" method="post">
+    <input type="submit" value="列出">
+</form>
+<hr/>
+列出已处理订单信息
+<form action="photographer/listTreatedOrdersWithPage" method="post">
+    页面大小<input type="text" name="page_size">
+    当前页<input type="text" name="current_page">
+    <input type="submit" value="列出">
+</form>
+<hr/>
+接单
+<form action="photographer/receiveOrder" method="post">
+    订单id<input type="text" name="orderinfo_id">
+    <input type="submit" value="接单">
+</form>
+<hr/>
+拒单
+<form action="photographer/refuseOrder" method="post">
+    订单id<input type="text" name="orderinfo_id">
+    <input type="submit" value="拒单">
+</form>
+</body>
+</html>
